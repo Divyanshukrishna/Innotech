@@ -2,8 +2,7 @@ from django.shortcuts import render,redirect,HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login as auth_login
 from login.models import data
-from .forms import UploadImageForm
-from .models import UploadedImage
+
 
 # Create your views here.
 
@@ -51,13 +50,7 @@ def groups(request):
     return render(request,"groups.html")
 
 
-def create_follow(request):
-    if request.method == 'POST':
-        form=UploadImageForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-        # else:
-        #     form=UploadImageForm()
+def create_follow(request):  
     return render(request,"create_follow.html")
 
 
