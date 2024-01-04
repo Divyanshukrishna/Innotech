@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="{% static 'css/create_follow.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+		<div class="edit_information">
+			<form action="" method="post" enctype="multipart/form-data">    
+				{% csrf_token %}
+				<h3 class="text-center">Edit Personal Information</h3>
+				<div class="row">
+					<div class="column">
+						<label for="">Upload Your Image</label><br><br>
+						{{form.as_p}}
+						{% comment %} <input type="file" id="myFile" name="filename"> {% endcomment %}
+					</div><br>
+					<div class="column">
+						<label class="profile_details_text" for="first_name">Name:</label>
+						<input type="text" name="first_name" id="first_name" class="form-control" value="" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<label class="profile_details_text" for="email">Email Address:</label>
+						<input type="email" name="email" id="email" class="form-control" value="" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<label class="profile_details_text" for="phone">Mobile Number:</label>
+						<input type="tel" name="phone" id="phone" class="form-control" value="" required pattern="[0-9]{10}">
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<label class="profile_details_text" for="birthday">Date Of Birth:</label>
+						<input type="date" name="birthday" id="birthday" class="form-control" value="" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<label class="profile_details_text" for="gender">Gender:</label>
+						<select name="gender" id="gender" class="form-control" value="" required>
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<label class="profile_details_text" for="nationality">Nationality:</label>
+						<input type="text" name="nationality" id="nationality" class="form-control" value="" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<label class="profile_details_text" for="monthly_income">Description:</label>
+						<textarea name="monthly_income" id="monthly_income" class="form-control" value="" required></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<a href="/">
+							<input type="submit" class="btn btn-success" value="Submit">
+						</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+</body>
+</html>

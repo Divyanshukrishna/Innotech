@@ -1,0 +1,417 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/w3.css"
+        integrity="sha512-xrXZhTQGOzqJtXPw9f3IsMCuG+3o9r9/oX6CHJ/wC4OHpAIV9Zk+hwz5BzP7tacmCGbeoj1g1kAvDuyzzDqVSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/groups_groups.css' %}">
+    <link rel="stylesheet" href="{% static 'css/groups_chat.css' %}">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <a href="/afs/">
+            <img src="{% static 'image/site_logo.png' %}" class="small-logo" alt="">
+        </a>
+        
+        <div class="dropdown">
+            <select name="collage" id="col"
+                style="width: 150px; color: white; background-color: #363062; padding: 5px; border-radius: 4px;">
+                <option value="">KIET group of institutions</option>
+                <option value="">GL Bajaj Institute of Technology and Management</option>
+                <option value="">Ajay Kumar Garg Engineering College</option>
+                <option value="">Amity University Noida</option>
+                <option value="">Sharda University Noida</option>
+                <option value="">Galgotias University</option>
+            </select>
+            <SELECT id="domain" NAME="section" onChange="SelectRedirect();"
+                style=" width: 150px;color: white; background-color: #363062; padding: 5px; border-radius: 4px;">
+                <Option value="">Select Section</option>
+                <Option value="ai">Artificial Intelligence</option>
+                <Option value="ml">Machine Learning</option>
+                <Option value="cc">Cloud Computing</option>
+                <Option value="bc">Blockchain Development</option>
+
+            </SELECT>
+        </div>
+        <a href="{% url "profile" %}" class="sign-in" style="z-index: 100; text-decoration: none;">
+            {% comment %} <i class="fa-solid fa-user fa-xl" style="color: #ffffff;"></i> {% endcomment %}
+            <h3>PROFILE</h3>
+        </a>
+
+    </nav>  
+    <section class="courses">
+        <div class="container">
+            <div class="domain-one" id="ai">
+                <div class="domain">
+                    <h1>Artificial Intelligence</h1>
+                </div>
+                <div class="masterclass">
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="/static/image/ai-1.jpg" width="100%" height="100%">
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">240 students</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>HackerSpaces and MakerSpaces :</h3>
+                                <p> Physical spaces where tech-minded individuals meet to collaborate on projects, often
+                                    involving open-source software and hardware.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Admin: Arsène Rurangiza</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/ai-2.jpeg' %}" width="100%" height="100%">
+
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">652 students</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>Open Source Software Foundations:</h3>
+                                <p>Various foundations and associations, like Apache Software Foundation, Linux
+                                    Foundation, etc., host forums, mailing lists.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Arsène Rurangiza</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/ai-3.jpeg' %}" width="100%" height="100%">
+
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">632 students</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>Meetup Groups: :</h3>
+                                <p>Local or global meetup groups focusing on open-source software can be found on
+                                    platforms like Meetup.com, where tech enthusiasts gather for discussions, workshops,
+                                    and networking events.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Arsène Rurangiza</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/ai-4.jpeg' %}" width="100%" height="100%">>
+
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">963 students</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>Mozilla Developer Network (MDN):</h3>
+                                <p>While primarily a resource for web developers, MDN also has a community section where
+                                    contributors discuss and collaborate on open-source web projects and standards.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Arsène Rurangiza</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="domain-one" id="ml">
+                <div class="domain">
+                    <h1>Machine Learning</h1>
+                </div>
+                <div class="masterclass">
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/ml-1.jpeg' %}" width="100%" height="100%">
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">240 students</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>HackerSpaces and MakerSpaces :</h3>
+                                <p> Physical spaces where tech-minded individuals meet to collaborate on projects, often
+                                    involving open-source software and hardware.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Admin: Arsène Rurangiza</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/ml-2.jpeg' %}" width="100%" height="100%">
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">652 students</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>Open Source Software Foundations:</h3>
+                                <p>Various foundations and associations, like Apache Software Foundation, Linux
+                                    Foundation, etc., host forums, mailing lists.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Arsène Rurangiza</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/ml-3.jpeg' %}" width="100%" height="100%">
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">632 students</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>Meetup Groups: :</h3>
+                                <p>Local or global meetup groups focusing on open-source software can be found on
+                                    platforms like Meetup.com, where tech enthusiasts gather for discussions, workshops,
+                                    and networking events.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Arsène Rurangiza</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/ml-4.jpeg' %}" width="100%" height="100%">
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">963 students</p>
+                                <p class="length">1h23m</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>Mozilla Developer Network (MDN):</h3>
+                                <p>While primarily a resource for web developers, MDN also has a community section where
+                                    contributors discuss and collaborate on open-source web projects and standards.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Arsène Rurangiza</p>
+                                <p class="pricing">150€</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="domain-one" id="cc">
+                <div class="domain">
+                    <h1>Cloud Computing</h1>
+                </div>
+                <div class="masterclass">
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/cc-1.jpeg' %}" width="100%" height="100%">
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">240 students</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>HackerSpaces and MakerSpaces :</h3>
+                                <p> Physical spaces where tech-minded individuals meet to collaborate on projects, often
+                                    involving open-source software and hardware.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Admin: Arsène Rurangiza</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/cc-2.jpeg' %}" width="100%" height="100%">
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">652 students</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>Open Source Software Foundations:</h3>
+                                <p>Various foundations and associations, like Apache Software Foundation, Linux
+                                    Foundation, etc., host forums, mailing lists.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Arsène Rurangiza</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/cc-3.jpeg' %}" width="100%" height="100%">
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">632 students</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>Meetup Groups: :</h3>
+                                <p>Local or global meetup groups focusing on open-source software can be found on
+                                    platforms like Meetup.com, where tech enthusiasts gather for discussions, workshops,
+                                    and networking events.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Arsène Rurangiza</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/cc-4.jpeg' %}" width="100%" height="100%">
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">963 students</p>
+                                <p class="length">1h23m</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>Mozilla Developer Network (MDN):</h3>
+                                <p>While primarily a resource for web developers, MDN also has a community section where
+                                    contributors discuss and collaborate on open-source web projects and standards.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Arsène Rurangiza</p>
+                                <p class="pricing">150€</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="domain-one" id="bc">
+                <div class="domain">
+                    <h1>Blockchain Development</h1>
+                </div>
+                <div class="masterclass">
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/bc-1.jpeg' %}" width="100%" height="100%">
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">240 students</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>HackerSpaces and MakerSpaces :</h3>
+                                <p> Physical spaces where tech-minded individuals meet to collaborate on projects, often
+                                    involving open-source software and hardware.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Admin: Arsène Rurangiza</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/bc-2.jpeg' %}" width="100%" height="100%">
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">652 students</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>Open Source Software Foundations:</h3>
+                                <p>Various foundations and associations, like Apache Software Foundation, Linux
+                                    Foundation, etc., host forums, mailing lists.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Arsène Rurangiza</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/bc-3.jpeg' %}" width="100%" height="100%">
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">632 students</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>Meetup Groups: :</h3>
+                                <p>Local or global meetup groups focusing on open-source software can be found on
+                                    platforms like Meetup.com, where tech enthusiasts gather for discussions, workshops,
+                                    and networking events.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Arsène Rurangiza</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card-masterclass">
+                        <div class="img-mastercover">
+                            <img src="{% static 'image/bc-4.jpeg' %}" width="100%" height="100%">
+                        </div>
+                        <div class="card-text-area">
+                            <div class="card-info-top">
+                                <p class="students">963 students</p>
+                                <p class="length">1h23m</p>
+                            </div>
+                            <div class="card-info-mid">
+                                <h3>Mozilla Developer Network (MDN):</h3>
+                                <p>While primarily a resource for web developers, MDN also has a community section where
+                                    contributors discuss and collaborate on open-source web projects and standards.</p>
+                            </div>
+                            <div class="card-info-bottom">
+                                <p class="instructeur">Arsène Rurangiza</p>
+                                <p class="pricing">150€</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        function SelectRedirect() {
+            // ON selection of section this function will work
+
+            switch (document.getElementById('domain').value) {
+                case "ml":
+                    window.location = "#ml";
+                    break;
+
+                case "ai":
+                    window.location = "#ai";
+                    break;
+
+                case "cc":
+                    window.location = "#cc";
+                    break;
+
+
+                case "bc":
+                    window.location = "#bc";
+                    break;
+
+                /// Can be extended to other different selections of SubCategory //////
+                default:
+                    // window.location="../"; 
+                    // if no selection matches then redirected to home page
+                    window.location = "#";
+                    break;
+            }// end of switch 
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

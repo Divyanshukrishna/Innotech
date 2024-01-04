@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*  CSS Reset */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+menu,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+    display: none;
+}
+
+body {
+    line-height: 1;
+    /* background-color: red; */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* .courses {
+    background-color: #ECF4D6;
+} */
+
+.domain-one {
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.domain h1 {
+    font-size: 35px;
+    color: #265073;
+}
+
+menu,
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* CSS  */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter, sans-serif;
+    background-color: #F3F3F3;
+
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 20px;
+    color: white;
+    background: linear-gradient(117.03deg,
+            #328bb3 0%,
+            #328bb3 0.01%,
+            rgba(252, 103, 84, 0.75) 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+p {
+    font-size: 20px;
+    color: #e9e9e9;
+    line-height: 1.4;
+}
+
+/*  Course Section  */
+
+.courses {
+    background-color: #F3F3F3;
+    height: 150vh;
+    display: flex;
+}
+
+.container {
+    width: 960px;
+    margin: auto;
+}
+
+.container>h2,
+.container>p {
+    text-align: center;
+}
+
+.img-mastercover {
+    width: 400px;
+    height: 222.34px;
+    margin: 0;
+    padding: 0;
+    /* border: 2px solid #F3F3F3; */
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+.img-mastercover:hover {
+    opacity: 0.5;
+}
+
+.img-mastercover {
+    background-image: url(https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+}
+
+.img-mastercover:hover .play-button {
+    display: flex;
+    z-index: 2;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    cursor: pointer;
+}
+
+/*  Masterclass */
+
+.masterclass {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.card-masterclass {
+    flex: 1 1 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* color: #9AD0C2; */
+}
+
+/*  Card Text  */
+.card-text-area {
+    box-shadow: 1px 1px black !important;
+
+    width: 400px;
+    background-color: #363062;
+    padding: 15px;
+    border: 2px solid #363062;
+    margin-bottom: 75px;
+    border-radius: 0 0 10px 10px;
+}
+
+.card-text-area:hover .img-mastercover {
+    opacity: 0.5;
+    box-shadow: 1px 1px black !important;
+
+    
+}
+
+.card-info-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.card-info-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.students,
+.length,
+.instructeur {
+    font-size: 12px;
+}
+
+/* Button  */
+
+.btn-secondary {
+    padding: 20px 40px;
+    border-radius: 30px;
+    border: 2px solid #313131;
+    background-color: #1e1e1e;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    transition: 0.2s;
+}
+
+.btn-secondary a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid #1e1e1e;
+}

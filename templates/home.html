@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/w3.css"
+        integrity="sha512-xrXZhTQGOzqJtXPw9f3IsMCuG+3o9r9/oX6CHJ/wC4OHpAIV9Zk+hwz5BzP7tacmCGbeoj1g1kAvDuyzzDqVSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <a href="#"><img src="{% static 'image/site_logo.png' %}" class="small-logo" alt=""></a>
+
+        <a href="{% url "login" %}" class="sign-in">
+            <i class="fa-solid fa-user-plus"></i>
+            Sign-In/Up</a>
+
+    </nav>
+    <div class="wrapper">
+        <div class="main-body">
+            <div class="content">
+                <div class="text">
+                    <div class="h1">WELCOME TO</div>
+                    <span class="role"></span>
+                    <br>
+                    <div class="text1">
+                        "Connect, collaborate, and innovate with like-minded tech enthusiasts. Join us to share ideas,
+                        thoughts, and network within the tech community."
+                    </div>
+                </div>
+                <img src="{% static 'image/front_page.png' %}" class="vector" height="600px" alt="">
+            </div>
+
+        </div>
+        <center>
+            <div class="our-features"> Our Features</div>
+    </div>
+    </center>
+    <div class="features">
+
+        <div class="services-box">
+            <i class=" icon fas fa-lightbulb" style="font-size: 3em;"></i>
+            <h3 class="h3">Anonymous Idea Sharing </h3>
+            <p> this platform encourages open expression, collaboration, and the free exchange of ideas, promoting a
+                vibrant and inclusive community of inventive thinkers.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="services-box">
+            <i class="fas fa-code icon" style="font-size: 3em;"></i>
+
+            <h3 class="h3">Code Snippet Formatting
+            </h3>
+            <p> With precision and ease, it transforms raw snippets into polished representations, enhancing readability
+                and facilitating seamless collaboration in the coding realm.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+
+
+        <div class="services-box ">
+            <i class="fas fa-code-branch icon" style="font-size: 3em;"></i>
+
+            <h3 class="h3">Collaborative Code Debugging</h3>
+            <p>By seamlessly connecting minds across screens, it enhances teamwork, accelerates bug resolution, and
+                fosters a dynamic and efficient coding experience."</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+
+    </div>
+    <div class="how-to-use">
+        <center>
+            <div class="our-features">How To Use</div>
+        </center>
+        <div class="videos-section">
+
+            <div class="explanation">
+
+                <iframe width="420" height="315" style="border-radius: 30px;"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY" class="videos">
+                </iframe>
+                <div class="h1">Introducting video</div>
+            </div>
+
+            <div class="explanation">
+                <iframe width="420" height="315" style="border-radius: 30px;"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY" class="videos">
+                </iframe>
+                <div class="h1">Full Explanation</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="about-us">
+
+        <center>
+            <div class="our-features" id="about">About-Us</div>
+        </center>
+
+        <div class="about-us-content">
+            <div class="text2">
+                "Welcome to <span class="bold">CAMPAIGE,</span> envisioned and crafted by the visionary team <span
+                    class="bold">SPARTANS,</span>.Our platform is a dedicated space for college students seeking to
+                explore and contribute to exciting projects.<span class="bold">CAMPAIGE</span> not only aids students in
+                discovering their desired projects but also assists recruiters in finding the perfect candidates for
+                upcoming ventures. .Join us in fostering collaboration, innovation, and academic excellence — where
+                projects meet passionate minds, and talent finds its perfect match Your journey to meaningful
+                collaborations starts here!"
+            </div>
+
+            <div class="photos">
+                <div class="img1"><img class="img" src="{% static 'image/yash.jpg' %}" alt="">
+                    <p>Yash Kr.Aggarwal</p>
+                    <p>Front-End Developer</p>
+
+                </div>
+                <div class="img1"><img class="img" src="{% static 'image/vijay.jpg' %}" alt="">
+                    <p>Vijay Kr.Chaurasiya</p>
+                    <p>Front-End Developer</p>
+                </div>
+                <div class="img1"><img class="img" src="{% static 'image/vishnu.png' %}" alt="">
+                    <p>Vishnu Kr.Verma </p>
+                    <p>Designer</p>
+                    <p>(Team Leader)</p>
+                </div>
+                <div class="img1"><img class="img"
+                        src="{% static 'image/divyanshu.jpg' %}" alt="">
+                    <p>Divyanshu Krishna </p>
+                    <p>Back-End Developer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span class="me">Us!</span></h2>
+
+        <form action="#" name="submit-to-google-sheet">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" name="Name">
+                <input type="email" placeholder="Email Address" name="Email">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number" name="Contact Number">
+                <input type="text" placeholder="Email Subject" name="Subject">
+            </div>
+            <textarea class="textarea" id="" placeholder="Your Message" name="Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-left col-md-4 col-sm-6">
+            <p class="about">
+                <span> About the company</span> Aids students in discovering their desired projects but also assists
+                recruiters in finding the perfect candidates for upcoming ventures. Join us in fostering a dynamic
+                ecosystem where innovation thrives, and aspiring minds connect seamlessly with impactful
+                opportunities.Join us in fostering collaboration, innovation, and academic excellence — where projects
+                meet passionate minds, and talent finds its perfect match Your journey to meaningful collaborations
+                starts here!"
+            </p>
+            <div class="icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-center col-md-4 col-sm-6">
+            <div id="class1">
+                <div><i class="fa fa-map-marker"></i></div>
+                <a>
+                    <p><span>KIET group of institutions</span> GZB, India</p>
+                </a>
+            </div>
+            <div class="class1">
+                <i class="fa fa-phone"></i>
+                <a id="tel" href="tel:+91-8273230778">8273230778</a>
+            </div>
+            <div class="class1">
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:yashaggarwal2002.ya@gmail.com"> yashaggarwal2002.ya@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right col-md-4 col-sm-6">
+            <a href="#"><img src="{% static 'image/site_logo.png' %}" class="small-logo" alt=""></a>
+            <p class="menu">
+                <a href="#"> Home</a> |
+                <a href="#"> About</a> |
+                <a href="#"> Services</a> |
+                <a href="#"> News</a> |
+                <a href="#"> Contact</a>
+            </p>
+            <p class="name">CAMPAIGE &copy; 2023</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script>
+        var typeData = new Typed(".role", {
+            strings: [
+                "CAMPAIGE",
+                "By the team SPARTANS"
+
+            ],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1000,
+        });
+
+
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyrHbDAM8Vnp5026VBsIYma93UX1CkM1zcgI7mfpfD0yGrNtWPoE0wKk0xseWibCCtJng/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
