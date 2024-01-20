@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>My Profile</title>
-    <link rel="stylesheet" href="profile.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static "css/profile.css" %}" />
 </head>
@@ -29,7 +29,12 @@
                 border-color: white;"> 
             </div>
             <div class="name">
+                {% if en.username %}
                 <p id="profileName">{{en.username}}</p>
+                {% else %}
+                <p id="profileName">update your profile</p>
+                {% endif %}
+
             </div>
       
             <div class="location">
